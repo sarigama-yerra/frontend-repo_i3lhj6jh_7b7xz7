@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CloudFlow – Installation Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#0f162f;--muted:#9aa4bf;--primary:#3b82f6}
+    *{box-sizing:border-box}body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:#0f172a}
+    .container{max-width:900px;margin:0 auto;padding:40px 20px}
+    h1{font-size:28px;margin:0 0 6px}h2{font-size:20px;margin:32px 0 12px}p{color:#475569;line-height:1.75}
+    code,pre{background:#0f172a0d;border:1px solid #e2e8f0;border-radius:10px;padding:2px 6px}
+    .card{border:1px solid #e2e8f0;border-radius:16px;padding:22px;background:#fff}
+    ul{padding-left:18px}
+    a{color:#2563eb;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CloudFlow – Installation Guide</h1>
+    <p>This template is a pure HTML + TailwindCSS (CDN) landing page with AOS animations. No build step required.</p>
+
+    <div class="card">
+      <h2>1. How to edit HTML</h2>
+      <p>Open <strong>index.html</strong> in your code editor. Update text in each section: Hero, Features, About, Pricing, Testimonials, FAQ, CTA, and Footer. Use semantic tags and preserve Tailwind utility classes for design consistency.</p>
+
+      <h2>2. How to edit Tailwind</h2>
+      <p>TailwindCSS is loaded via the CDN. You can adjust styles using utility classes directly in HTML. Additional custom styles are stored in <strong>assets/css/style.css</strong> for reusable patterns (buttons, cards, etc.).</p>
+
+      <h2>3. How to change images</h2>
+      <p>Replace placeholder image URLs (<code>https://via.placeholder.com/...</code>) in the HTML with your own assets. You can place local images inside <strong>assets/img/</strong> and update the <code>src</code> attributes to point at those paths.</p>
+
+      <h2>4. How to customize colors</h2>
+      <p>Primary theme colors are configured in a small Tailwind setup script inside <strong>index.html</strong>. Update the color values (primary 500/600/700) to match your brand. You can also extend components in <strong>assets/css/style.css</strong>.</p>
+
+      <h2>5. How to deploy on hosting</h2>
+      <ul>
+        <li>Static hosting: Upload the entire <strong>cloudflow-landing</strong> folder to Netlify, Vercel, GitHub Pages, or any static host.</li>
+        <li>Ensure all relative paths remain intact (e.g., <code>assets/js/main.js</code>).</li>
+        <li>No server required – everything runs in the browser.</li>
+      </ul>
+
+      <h2>6. JavaScript functionality</h2>
+      <p>The file <strong>assets/js/main.js</strong> contains: mobile menu toggle, smooth scrolling, FAQ accordion behavior, and AOS initialization. You may extend it for additional interactions.</p>
+
+      <h2>7. Notes</h2>
+      <ul>
+        <li>Keep HTML accessible with alt attributes and landmarks.</li>
+        <li>Use descriptive titles and meta descriptions for SEO.</li>
+        <li>Compress images before using in production for optimal performance.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* CloudFlow Landing - Custom CSS (no inline styles) */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-brd: rgba(148, 163, 184, 0.25);
+}
+
+html { scroll-behavior: smooth; }
+
+.badge { @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-semibold; }
+.link { @apply text-slate-600 hover:text-slate-900 transition; }
+.mob-link { @apply px-4 py-3 rounded-xl hover:bg-white text-slate-700; }
+.btn-primary { @apply px-6 py-3 rounded-2xl bg-primary-700 text-white hover:bg-primary-800 shadow-glow text-sm font-semibold; }
+.btn-white { @apply px-6 py-3 rounded-2xl border border-slate-200 hover:border-slate-300 text-slate-800 bg-white/80 backdrop-blur text-sm font-semibold; }
+.btn-outline { @apply px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300 text-slate-700 bg-white/60 backdrop-blur; }
+
+.section-title { @apply text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900; }
+.split-title { @apply text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 mt-2; }
+.split-desc { @apply mt-4 text-slate-600; }
+.li-check { @apply flex items-start gap-3; }
+.li-check::before { content: ""; display:inline-block; width:20px; height:20px; margin-top:2px; border-radius:9999px; background:#e2e8f0 url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%231D4ED8\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6L9 17l-5-5\"/></svg>') no-repeat center; background-size:14px 14px; }
+
+.icon-wrap { @apply h-12 w-12 rounded-xl bg-primary-50 text-primary-700 flex items-center justify-center; }
+.icon { width: 22px; height: 22px; }
+
+.feature-card { @apply relative rounded-2xl p-6 bg-white/70 backdrop-blur border border-white/60 shadow-soft transition hover:shadow-glow; }
+.card-title { @apply mt-4 font-semibold text-slate-900; }
+.card-desc { @apply mt-2 text-slate-600 text-sm; }
+
+.glass-card { background: var(--glass-bg); border: 1px solid var(--glass-brd); box-shadow: 0 10px 30px rgba(2,6,23,0.08); }
+
+.spline-wrap { position: relative; width: 100%; height: 360px; }
+.spline-viewer { width: 100%; height: 100%; display: block; }
+
+.pricing-card { @apply relative rounded-2xl p-6 bg-white/70 backdrop-blur border border-white/60 shadow-soft transition hover:shadow-glow flex flex-col; }
+.pricing-name { @apply font-semibold text-slate-900; }
+.pricing-price { @apply mt-2 text-3xl font-extrabold; }
+.pricing-list { @apply mt-4 space-y-2 text-slate-700; }
+.pricing-cta { @apply mt-6 inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-200 text-slate-800 bg-white hover:border-slate-300; }
+.pricing-cta.primary { @apply bg-primary-700 text-white border-primary-700 hover:bg-primary-800; }
+.popular { box-shadow: 0 10px 40px rgba(37,99,235,0.25); position: relative; }
+.popular-badge { @apply absolute -top-3 left-6 px-3 py-1 text-xs rounded-full bg-primary-700 text-white shadow-soft; }
+
+.testimonial { @apply rounded-2xl p-6 bg-white/70 backdrop-blur border border-white/60 shadow-soft; }
+
+.accordion { @apply rounded-2xl bg-white/70 backdrop-blur border border-white/60 shadow-soft; }
+.accordion-trigger { @apply w-full flex items-center gap-3 text-left px-5 py-4 font-medium text-slate-900; }
+.accordion-content { @apply px-5 pb-5 hidden text-slate-700; }
+.accordion.open .accordion-content { display: block; }
+.accordion.open .accordion-trigger svg { transform: rotate(180deg); }
+
+.footer-title { @apply text-sm font-semibold text-slate-900; }
+.footer-links { @apply mt-3 space-y-2 text-sm; }
+.footer-links a { @apply text-slate-600 hover:text-slate-900; }
+.social { @apply inline-flex items-center justify-center h-9 w-9 rounded-full border border-slate-200 text-slate-600 hover:text-slate-900; }
+
+/* Utilities */
+.bg-hero-gradient { background-image: radial-gradient(100% 100% at 0% 0%, rgba(59,130,246,0.12) 0%, rgba(255,255,255,0) 60%), radial-gradient(100% 100% at 100% 0%, rgba(37,99,235,0.12) 0%, rgba(255,255,255,0) 60%); }

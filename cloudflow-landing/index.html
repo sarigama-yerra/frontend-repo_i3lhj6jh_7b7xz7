@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CloudFlow – Modern SaaS platform landing page template. Smooth AOS animations, responsive, and production-ready." />
+  <meta name="keywords" content="SaaS, Tailwind, Landing Page, AOS, Responsive" />
+  <meta name="author" content="CloudFlow" />
+  <title>CloudFlow – SaaS Landing Template</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            },
+            dark: '#0b1020'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.08)',
+            glow: '0 10px 40px rgba(37, 99, 235, 0.35)'
+          },
+          backgroundImage: {
+            'hero-gradient': 'radial-gradient(100% 100% at 0% 0%, rgba(59,130,246,0.12) 0%, rgba(255,255,255,0) 60%), radial-gradient(100% 100% at 100% 0%, rgba(37,99,235,0.12) 0%, rgba(255,255,255,0) 60%)'
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-slow': 'float 10s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Spline Viewer (Hero 3D Object) -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-white/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <a href="#" class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-600 text-white shadow-glow">
+            <svg xmlns="http://www.w3.org/200/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l3-3 3 3 3-3 3 3 3-3"/></svg>
+          </span>
+          <span class="text-lg font-semibold tracking-tight">CloudFlow</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#features" class="link">Features</a>
+          <a href="#about" class="link">About</a>
+          <a href="#pricing" class="link">Pricing</a>
+          <a href="#testimonials" class="link">Testimonials</a>
+          <a href="#faq" class="link">FAQ</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#pricing" class="btn-outline">Sign in</a>
+          <a href="#cta" class="btn-primary">Get Started</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-slate-200 text-slate-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-6">
+        <nav class="grid gap-2">
+          <a href="#features" class="mob-link">Features</a>
+          <a href="#about" class="mob-link">About</a>
+          <a href="#pricing" class="mob-link">Pricing</a>
+          <a href="#testimonials" class="mob-link">Testimonials</a>
+          <a href="#faq" class="mob-link">FAQ</a>
+          <div class="flex gap-3 pt-2">
+            <a href="#pricing" class="flex-1 text-center btn-outline">Sign in</a>
+            <a href="#cta" class="flex-1 text-center btn-primary">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-hero-gradient">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Copy -->
+        <div data-aos="fade-right" class="space-y-6">
+          <span class="badge">New: Workspaces & AI Assist</span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">Build, automate, and scale your workflow in minutes</h1>
+          <p class="text-lg text-slate-600 max-w-xl">CloudFlow is the modern SaaS operating system for product teams. Create docs, automate tasks, and track performance—all in one beautiful place.</p>
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href="#pricing" class="btn-primary">Start Free Trial</a>
+            <a href="#features" class="btn-white">See Features</a>
+          </div>
+          <div class="flex items-center gap-6 pt-4">
+            <div class="flex items-center gap-2 text-slate-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4-1.5-1.5L11 11l-1.5-1.5L8 10z"/></svg>
+              <span class="text-sm">No credit card required</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4-1.5-1.5L11 11l-1.5-1.5L8 10z"/></svg>
+              <span class="text-sm">Cancel anytime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Visual -->
+        <div class="relative" data-aos="zoom-in">
+          <div class="glass-card rounded-2xl p-2">
+            <div class="spline-wrap rounded-xl overflow-hidden">
+              <spline-viewer url="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode" class="spline-viewer"></spline-viewer>
+            </div>
+          </div>
+          <!-- Floating shapes -->
+          <div class="absolute -left-6 -top-6 w-24 h-24 rounded-2xl bg-gradient-to-br from-white/70 to-primary-100/60 shadow-soft backdrop-blur-lg animate-float-slow"></div>
+          <div class="absolute -right-4 bottom-10 w-20 h-20 rounded-full bg-gradient-to-br from-primary-200/70 to-white/60 shadow-soft backdrop-blur-lg animate-float"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <h2 class="section-title">Powerful features for modern teams</h2>
+        <p class="mt-4 text-slate-600">Ship faster with a clean, unified workspace designed for focus.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card" data-aos="fade-up">
+          <div class="icon-wrap">
+            <i data-lucide="zap" class="icon"></i>
+          </div>
+          <h3 class="card-title">Automations</h3>
+          <p class="card-desc">Trigger workflows, route approvals, and free your team from manual busywork.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="icon-wrap">
+            <i data-lucide="file-text" class="icon"></i>
+          </div>
+          <h3 class="card-title">Docs & Wikis</h3>
+          <p class="card-desc">Real-time editing with comments, mentions, and version history.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-wrap">
+            <i data-lucide="bar-chart-3" class="icon"></i>
+          </div>
+          <h3 class="card-title">Dashboards</h3>
+          <p class="card-desc">Visualize KPIs and progress with beautiful charts.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="icon-wrap">
+            <i data-lucide="check-circle-2" class="icon"></i>
+          </div>
+          <h3 class="card-title">Tasks</h3>
+          <p class="card-desc">Plan sprints, assign owners, and track velocity with ease.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-wrap">
+            <i data-lucide="shield" class="icon"></i>
+          </div>
+          <h3 class="card-title">Security</h3>
+          <p class="card-desc">SSO/SAML, audit logs, and encryption by default.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="icon-wrap">
+            <i data-lucide="puzzle" class="icon"></i>
+          </div>
+          <h3 class="card-title">Integrations</h3>
+          <p class="card-desc">Connect Slack, Google, GitHub, Stripe and 100+ apps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <span class="badge">Why CloudFlow</span>
+        <h3 class="split-title">We bring your team's work together</h3>
+        <p class="split-desc">Eliminate tool sprawl and context switching. CloudFlow centralizes your docs, tasks, data, and automations so your team can focus on impact.</p>
+        <ul class="space-y-3 text-slate-700">
+          <li class="li-check">Delightful UX your team will love</li>
+          <li class="li-check">Built for scale and reliability</li>
+          <li class="li-check">World-class support and onboarding</li>
+        </ul>
+      </div>
+      <div data-aos="fade-left">
+        <img src="https://via.placeholder.com/1200x800" class="rounded-2xl shadow-soft" alt="About screenshot" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <h2 class="section-title">Pricing that scales with you</h2>
+        <p class="mt-4 text-slate-600">Fair, transparent pricing. Change or cancel anytime.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="pricing-card" data-aos="zoom-in">
+          <h4 class="pricing-name">Free</h4>
+          <p class="pricing-price"><span class="text-slate-900">$0</span> <span class="text-slate-500 text-sm">/mo</span></p>
+          <ul class="pricing-list">
+            <li class="li-check">Up to 3 members</li>
+            <li class="li-check">Unlimited docs</li>
+            <li class="li-check">Basic automations</li>
+          </ul>
+          <a href="#" class="pricing-cta">Get started</a>
+        </div>
+
+        <div class="pricing-card popular" data-aos="zoom-in" data-aos-delay="50">
+          <span class="popular-badge">Most Popular</span>
+          <h4 class="pricing-name">Standard</h4>
+          <p class="pricing-price"><span class="text-slate-900">$12</span> <span class="text-slate-500 text-sm">/user/mo</span></p>
+          <ul class="pricing-list">
+            <li class="li-check">Everything in Free</li>
+            <li class="li-check">Unlimited members</li>
+            <li class="li-check">Advanced automations</li>
+            <li class="li-check">All integrations</li>
+          </ul>
+          <a href="#" class="pricing-cta primary">Choose Standard</a>
+        </div>
+
+        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="pricing-name">Premium</h4>
+          <p class="pricing-price"><span class="text-slate-900">$29</span> <span class="text-slate-500 text-sm">/user/mo</span></p>
+          <ul class="pricing-list">
+            <li class="li-check">Everything in Standard</li>
+            <li class="li-check">Enterprise security</li>
+            <li class="li-check">Priority support</li>
+          </ul>
+          <a href="#" class="pricing-cta">Talk to sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <h2 class="section-title">What customers say</h2>
+        <p class="mt-4 text-slate-600">Real feedback from real teams.</p>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="testimonial" data-aos="fade-up">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxhdmF0YXJ8ZW58MHwwfHx8MTc2MzE2NDUzMXww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80" alt="avatar" />
+            <div>
+              <p class="font-semibold text-slate-900">Ava Collins</p>
+              <p class="text-xs text-slate-500">Head of Product, Nova</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-700">“We replaced three tools with CloudFlow. One source of truth, finally.”</p>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="50">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxhdmF0YXJ8ZW58MHwwfHx8MTc2MzE2NDUzMXww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80" alt="avatar" />
+            <div>
+              <p class="font-semibold text-slate-900">Maya Singh</p>
+              <p class="text-xs text-slate-500">COO, FolioKit</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-700">“Automations save ~12 hours a week across ops. Worth every cent.”</p>
+        </div>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxhdmF0YXJ8ZW58MHwwfHx8MTc2MzE2NDUzMXww&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80" alt="avatar" />
+            <div>
+              <p class="font-semibold text-slate-900">Liam Becker</p>
+              <p class="text-xs text-slate-500">CTO, Framebyte</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-700">“Onboarded in a day and shipped our roadmap two sprints earlier.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="mt-4 text-slate-600">Everything you need to know about CloudFlow.</p>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <div class="accordion" data-aos="fade-up">
+          <button class="accordion-trigger">
+            <span>Can I use CloudFlow for free?</span>
+            <svg class="h-5 w-5 ml-auto transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5 8l5 5 5-5H5z"/></svg>
+          </button>
+          <div class="accordion-content">
+            <p>Yes! Our free plan includes unlimited docs and basic automations for up to 3 members. Upgrade anytime.</p>
+          </div>
+        </div>
+        <div class="accordion" data-aos="fade-up">
+          <button class="accordion-trigger">
+            <span>Do you offer a money-back guarantee?</span>
+            <svg class="h-5 w-5 ml-auto transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5 8l5 5 5-5H5z"/></svg>
+          </button>
+          <div class="accordion-content">
+            <p>We offer a 14-day money-back guarantee on paid plans. No questions asked.</p>
+          </div>
+        </div>
+        <div class="accordion" data-aos="fade-up">
+          <button class="accordion-trigger">
+            <span>How secure is CloudFlow?</span>
+            <svg class="h-5 w-5 ml-auto transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5 8l5 5 5-5H5z"/></svg>
+          </button>
+          <div class="accordion-content">
+            <p>We use encryption at rest and in transit, SSO/SAML, and SOC 2 Type II compliant processes.</p>
+          </div>
+        </div>
+        <div class="accordion" data-aos="fade-up">
+          <button class="accordion-trigger">
+            <span>Can I cancel anytime?</span>
+            <svg class="h-5 w-5 ml-auto transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5 8l5 5 5-5H5z"/></svg>
+          </button>
+          <div class="accordion-content">
+            <p>Absolutely. You can cancel your subscription at any time from your billing settings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-20">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="glass-card rounded-2xl p-10 text-center" data-aos="zoom-in">
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900">Get your team in flow</h3>
+        <p class="mt-3 text-slate-600">Create your workspace today. No credit card required.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#pricing" class="btn-primary">Create a free account</a>
+          <a href="#features" class="btn-white">Explore features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-16 pb-10 border-t border-white/60 bg-white/70">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-600 text-white">
+              <i data-lucide="bolt" class="h-5 w-5"></i>
+            </span>
+            <span class="text-lg font-semibold tracking-tight">CloudFlow</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600">The modern workflow platform for teams that move fast.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+          <div class="flex gap-3 mt-4">
+            <a href="#" aria-label="Twitter" class="social">
+              <i data-lucide="twitter"></i>
+            </a>
+            <a href="#" aria-label="GitHub" class="social">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social">
+              <i data-lucide="linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-500">
+        <p>© <span id="year"></span> CloudFlow, Inc. All rights reserved.</p>
+        <div class="mt-3 sm:mt-0 flex items-center gap-4">
+          <a href="#" class="hover:text-slate-700">Terms</a>
+          <a href="#" class="hover:text-slate-700">Privacy</a>
+          <a href="#" class="hover:text-slate-700">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (window.lucide && window.lucide.createIcons) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
